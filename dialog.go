@@ -12,7 +12,7 @@ type DialogTrigger struct {
 }
 
 type Dialog struct {
-	State          string          `json:"status"`
+	State          string          `json:"state"`
 	CallbackId     string          `json:"callback_id"`                //Required.
 	Title          string          `json:"title"`                      //Required.
 	SubmitLabel    string          `json:"submit_label,omitempty"`     //Optional. Default value is 'Submit'
@@ -55,7 +55,7 @@ type DialogElementOption struct {
 
 // DialogCallback is sent from Slack when a user submits a form from within a dialog
 type DialogCallback struct {
-	State       string            `json:"status"`
+	State       string            `json:"state"`
 	Type        string            `json:"type"`
 	CallbackID  string            `json:"callback_id"`
 	Team        Team              `json:"team"`
